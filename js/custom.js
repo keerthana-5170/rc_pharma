@@ -17,8 +17,8 @@ $(function(){
 
     /* Smooth scroll and Scroll spy (https://github.com/ChrisWojcik/single-page-nav)    
     ---------------------------------------------------------------------------------*/ 
-    $('.templatemo-nav').singlePageNav({
-        offset: $(".templatemo-nav").height(),
+    $('.main-nav').singlePageNav({
+        offset: $(".main-nav").height(),
         filter: ':not(.external)',
         updateHash: false
     });
@@ -26,10 +26,10 @@ $(function(){
     /* start navigation top js */
     $(window).scroll(function(){
         if($(this).scrollTop()>58){
-            $(".templatemo-nav").addClass("sticky");
+            $(".main-nav").addClass("sticky");
         }
         else{
-            $(".templatemo-nav").removeClass("sticky");
+            $(".main-nav").removeClass("sticky");
         }
     });
     
@@ -52,3 +52,10 @@ $(window).load(function(){
 	$('.preloader').fadeOut(1000); // set duration in brackets    
 });
 /* end preloader */
+jQuery(document).ready(function($) {
+    $('.projects-holder').mixitup({
+        effects: ['fade','grayscale'],
+        easing: 'snap',
+        transitionSpeed: 400
+    });
+    });
